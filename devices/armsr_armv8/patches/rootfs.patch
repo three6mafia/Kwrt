@@ -11,7 +11,7 @@
      IMAGES-y += combined.img
    endif
    ifeq ($(CONFIG_VMDK_IMAGES),y)
-@@ -116,4 +114,23 @@ define Device/generic
+@@ -116,4 +114,24 @@ define Device/generic
  endef
  TARGET_DEVICES += generic
  
@@ -20,6 +20,7 @@
 +  DEVICE_PACKAGES := perlbase-base perlbase-utf8 perlbase-time perlbase-xsloader perlbase-file btrfs-progs luci-app-amlogic kmod-brcmfmac wpad-basic-mbedtls iw fdisk lsblk automount
 +  IMAGE/rootfs.tar.gz := append-rootfs | gzip
 +  IMAGES := rootfs.tar.gz
++  KERNEL := kernel-bin
 +endef
 +TARGET_DEVICES += box
 +
